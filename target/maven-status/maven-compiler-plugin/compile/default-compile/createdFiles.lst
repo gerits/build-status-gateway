@@ -1,0 +1,15 @@
+be\rubengerits\buildstatus\Authenticate.class
+be\rubengerits\buildstatus\Repositories.class
+be\rubengerits\buildstatus\model\github\GithubAuthenticationResponse.class
+be\rubengerits\buildstatus\model\github\GithubAuthenticationRequest.class
+be\rubengerits\buildstatus\model\travisci\TravisCiAuthRequest.class
+be\rubengerits\buildstatus\BuildStatusApplication.class
+be\rubengerits\buildstatus\GsonMessageBodyHandler.class
+be\rubengerits\buildstatus\model\global\RepositoriesResponse.class
+be\rubengerits\buildstatus\model\global\AuthenticationException.class
+be\rubengerits\buildstatus\consumer\GithubConsumer.class
+be\rubengerits\buildstatus\model\travisci\TravisCiAuthResponse.class
+be\rubengerits\buildstatus\model\github\GithubErrorResponse$GithubError.class
+be\rubengerits\buildstatus\model\github\GithubErrorResponse.class
+be\rubengerits\buildstatus\consumer\TravisCiConsumer.class
+be\rubengerits\buildstatus\model\global\AuthenticationResponse.class

@@ -1,89 +1,148 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>jbosseap</groupId>
-	<artifactId>jbosseap</artifactId>
-	<packaging>war</packaging>
-	<version>1.0</version>
-	<name>jbosseap</name>
-	<repositories>
-		<repository>
-			<id>eap</id>
-			<url>http://maven.repository.redhat.com/techpreview/all</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>eap</id>
-			<url>http://maven.repository.redhat.com/techpreview/all</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories>
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.6</maven.compiler.source>
-		<maven.compiler.target>1.6</maven.compiler.target>
-	</properties>
-	<dependencies>
-<!--
-As updates are released for EAP the version of the provided jboss-javaee-6.0
-jar can change.  To ensure your application is compiling against the same jars
-that the runtime provides the <version> element below should match the
-installed version of EAP on the node hosting your application.  To determine
-the version of EAP running on the node, log into an example EAP application and
-look in the jbosseap/logs/server.log file for the line:
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>jbosseap</groupId>
+    <artifactId>jbosseap</artifactId>
+    <packaging>war</packaging>
+    <version>1.0</version>
+    <name>jbosseap</name>
+    <repositories>
+        <repository>
+            <id>eap</id>
+            <url>http://maven.repository.redhat.com/techpreview/all</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>jboss</id>
+            <url>http://repository.jboss.org/maven2</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>eap</id>
+            <url>http://maven.repository.redhat.com/techpreview/all</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.6</maven.compiler.source>
+        <maven.compiler.target>1.6</maven.compiler.target>
+        <jboss.eap.version>1.0.7.Final</jboss.eap.version>
+        <httpclient.version>4.5</httpclient.version>
+        <commons-io.version>2.4</commons-io.version>
+        <version.commons.logging>1.1.1</version.commons.logging>
+        <resteasy.version>2.2.1.GA</resteasy.version>
+    </properties>
 
-... JBAS015874: JBoss EAP 6.1.1.GA (AS 7.2.1.Final-redhat-10) started ...
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.jboss.bom</groupId>
+                <artifactId>jboss-javaee-6.0-with-tools</artifactId>
+                <version>${jboss.eap.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.resteasy</groupId>
+                <artifactId>resteasy-multipart-provider</artifactId>
+                <version>${resteasy.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.resteasy</groupId>
+                <artifactId>resteasy-jaxrs</artifactId>
+                <version>${resteasy.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.resteasy</groupId>
+                <artifactId>resteasy-jaxb-provider</artifactId>
+                <version>${resteasy.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>2.6.2</version>
+                <scope>compile</scope>
+            </dependency>
 
-To determine the correct value for <version>, download the maven repository zip
-file corresponding to the installed version of EAP from the customer service
-portal [1].  Unzip the file and examine the single directory under
-jboss-eap-*-maven-repository/org/jboss/spec/jboss-javaee-6.0
+            <!--
+            [INFO] +- org.jboss.resteasy:resteasy-jaxrs:jar:2.3.5.Final:compile
+            [INFO] |  +- org.jboss.resteasy:jaxrs-api:jar:2.3.5.Final:compile
+            [INFO] +- org.jboss.resteasy:resteasy-client:jar:3.0.16.Final:compile
+            [INFO] \- org.jboss.resteasy:resteasy-multipart-provider:jar:3.0.16.Final:compile
+            [INFO]    +- org.jboss.resteasy:resteasy-jaxb-provider:jar:2.3.5.Final:compile
+            -->
 
-[1] https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=appplatform&productChanged=yes"
--->
-		<dependency>
-			<groupId>org.jboss.spec</groupId>
-			<artifactId>jboss-javaee-6.0</artifactId>
-			<version>3.0.2.Final-redhat-4</version>
-			<type>pom</type>
-			<scope>provided</scope>
-		</dependency>
-	</dependencies>
-	<profiles>
-		<profile>
-			<!-- When built in OpenShift the 'openshift' profile will be used when 
-				invoking mvn. -->
-			<!-- Use this profile for any OpenShift specific customization your app 
-				will need. -->
-			<!-- By default that is to put the resulting archive into the 'deployments' 
-				folder. -->
-			<!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
-			<id>openshift</id>
-			<build>
-				<finalName>jbosseap</finalName>
-				<plugins>
-					<plugin>
-						<artifactId>maven-war-plugin</artifactId>
-						<version>2.1.1</version>
-						<configuration>
-							<outputDirectory>deployments</outputDirectory>
-							<warName>ROOT</warName>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jaxrs</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-multipart-provider</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jaxb-provider</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+        </dependency>
+    </dependencies>
+    <profiles>
+        <profile>
+            <id>openshift</id>
+            <build>
+                <finalName>jbosseap</finalName>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <version>2.1.1</version>
+                        <configuration>
+                            <outputDirectory>deployments</outputDirectory>
+                            <warName>ROOT</warName>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>local</id>
+            <properties>
+                <jboss.home>C:\development\apps\EAP</jboss.home>
+            </properties>
+            <build>
+                <finalName>jbosseap</finalName>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <version>2.1.1</version>
+                        <configuration>
+                            <outputDirectory>${jboss.home}/standalone/deployments</outputDirectory>
+                            <warName>build-status-gateway</warName>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
