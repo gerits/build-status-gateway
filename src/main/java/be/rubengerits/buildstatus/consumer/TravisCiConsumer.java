@@ -40,7 +40,7 @@ public class TravisCiConsumer {
 		ClientResponse response = createTravisCiClient(authorization, "/repos/?member=" + account.getLogin()).get();
 
 		if (response.getStatus() == 200) {
-			return new TravisCiRepositoriesResponse((Repository[]) response.getEntity(Repository[].class));
+			return (TravisCiRepositoriesResponse) response.getEntity(TravisCiRepositoriesResponse.class);
 		}
 
 		throw new WebApplicationException(response);
