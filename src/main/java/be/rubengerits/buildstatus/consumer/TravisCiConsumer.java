@@ -1,10 +1,10 @@
 package be.rubengerits.buildstatus.consumer;
 
-import be.rubengerits.buildstatus.model.travisci.TravisCiAuthRequest;
-import be.rubengerits.buildstatus.model.travisci.TravisCiAuthResponse;
+import be.rubengerits.buildstatus.model.travisci.*;
 import org.jboss.resteasy.client.ClientRequest;
 import org.jboss.resteasy.client.ClientResponse;
 
+import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 
 public class TravisCiConsumer {
@@ -23,18 +23,37 @@ public class TravisCiConsumer {
 			return (TravisCiAuthResponse) response.getEntity(TravisCiAuthResponse.class);
 		}
 
-		throw new Exception("Something wrong?");
+		throw new WebApplicationException(response);
 	}
 
-	private static ClientRequest createTravisCiClient(String token, String url) {
+	public static TravisCiAccountsResponse getAccounts(String authorization) throws Exception {
+		ClientResponse response = createTravisCiClient(authorization, "/accounts").get();
+
+		if (response.getStatus() == 200) {
+			return (TravisCiAccountsResponse) response.getEntity(TravisCiAccountsResponse.class);
+		}
+
+		throw new WebApplicationException(response);
+	}
+
+	public static TravisCiRepositoriesResponse getRepositories(String authorization, Account account) throws Exception {
+		ClientResponse response = createTravisCiClient(authorization, "/repos/?member=" + account.getLogin()).get();
+
+		if (response.getStatus() == 200) {
+			return new TravisCiRepositoriesResponse((Repository[]) response.getEntity(Repository[].class));
+		}
+
+		throw new WebApplicationException(response);
+	}
+
+	private static ClientRequest createTravisCiClient(String authorization, String url) {
 		ClientRequest request = new ClientRequest(TRAVIS_API + url);
 		request.accept(MediaType.APPLICATION_JSON_TYPE);
 		request.header("User-Agent", "TravisBuildStatus/1.0.0");
-		if (token != null) {
-			request.header("Authorization", token);
+		if (authorization != null) {
+			request.header("Authorization", authorization);
 		}
 		request.header("Accept", "application/vnd.travis-ci.2+json");
 		return request;
 	}
-
 }

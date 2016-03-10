@@ -1,8 +1,10 @@
 package be.rubengerits.buildstatus.model.global;
 
-public class AuthenticationResponse {
+public class AuthenticationResponse implements WebserviceError {
 
 	private String accessToken;
+
+	private Integer status;
 
 	private String message;
 
@@ -21,10 +23,22 @@ public class AuthenticationResponse {
 		this.accessToken = accessToken;
 	}
 
+	@Override
+	public Integer getStatus() {
+		return status;
+	}
+
+	@Override
+	public void setStatus(Integer status) {
+		this.status = status;
+	}
+
+	@Override
 	public String getMessage() {
 		return message;
 	}
 
+	@Override
 	public void setMessage(String message) {
 		this.message = message;
 	}

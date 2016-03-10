@@ -1,4 +1,4 @@
-package be.rubengerits.buildstatus;
+package be.rubengerits.buildstatus.services;
 
 import be.rubengerits.buildstatus.consumer.GithubConsumer;
 import be.rubengerits.buildstatus.consumer.TravisCiConsumer;
@@ -6,11 +6,13 @@ import be.rubengerits.buildstatus.model.github.GithubAuthenticationResponse;
 import be.rubengerits.buildstatus.model.global.AuthenticationException;
 import be.rubengerits.buildstatus.model.global.AuthenticationResponse;
 import be.rubengerits.buildstatus.model.travisci.TravisCiAuthResponse;
+import org.jboss.resteasy.logging.Logger;
 
 import javax.ws.rs.*;
 
 @Path("/authenticate")
-public class Authenticate {
+public class AuthenticateService {
+	private static final Logger LOGGER = Logger.getLogger(AuthenticateService.class);
 
 	@POST
 	@Consumes("application/json")
@@ -24,14 +26,14 @@ public class Authenticate {
 
 			return new AuthenticationResponse(travisToken.getAccessToken());
 		} catch (Exception e) {
-			e.printStackTrace();
+			LOGGER.error(e.getMessage(), e);
 			throw new AuthenticationException(e);
 		} finally {
 			if (githubResponse != null) {
 				try {
 					GithubConsumer.deleteAuth(authentication, githubResponse.getId());
 				} catch (Exception e) {
-					e.printStackTrace();
+					LOGGER.error(e.getMessage(), e);
 					throw new AuthenticationException(e);
 				}
 			}

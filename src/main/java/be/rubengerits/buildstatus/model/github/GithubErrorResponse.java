@@ -7,7 +7,6 @@ import java.util.List;
 public class GithubErrorResponse {
 	private String message;
 	private List<GithubError> errors;
-	//@JsonProperty("documentation_url")
 	@SerializedName("documentation_url")
 	private String documentationUrl;
 

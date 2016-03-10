@@ -6,11 +6,11 @@ import be.rubengerits.buildstatus.model.github.GithubErrorResponse;
 import org.jboss.resteasy.client.ClientRequest;
 import org.jboss.resteasy.client.ClientResponse;
 
+import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
 public class GithubConsumer {
-
 	public static final String GITHUB_API = "https://api.github.com";
 	public static final String AUTHORIZATIONS = "/authorizations";
 
@@ -34,7 +34,7 @@ public class GithubConsumer {
 		}
 
 		GithubErrorResponse githubError = (GithubErrorResponse) response.getEntity(GithubErrorResponse.class);
-		throw new Exception(githubError.getMessage());
+		throw new WebApplicationException(response);
 	}
 
 	public static void deleteAuth(String authorization, String id) throws Exception {
