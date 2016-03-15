@@ -48,6 +48,16 @@ public class TravisCiConsumer {
         throw new WebApplicationException(response);
     }
 
+    public static TravisCiRepositoryBuildResponse getRepositoryBuilds(String authorization, String id) throws Exception {
+        ClientResponse response = createTravisCiClient(authorization, "/builds/?repository_id=" + id ).get();
+
+        if (response.getStatus() == 200) {
+            return (TravisCiRepositoryBuildResponse) response.getEntity(TravisCiRepositoryBuildResponse.class);
+        }
+
+        throw new WebApplicationException(response);
+    }
+
     private static ClientRequest createTravisCiClient(String authorization, String url) {
         ClientRequest request = new ClientRequest(TRAVIS_API + url);
         request.accept(ACCEPT);

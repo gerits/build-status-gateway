@@ -2,80 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1091ee18-8aca-476f-be80-90543408af32" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_6_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_stream_sjsxp_1_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_httpclient_commons_httpclient_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javassist_javassist_3_12_1_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_jsr250_api_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_4_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_stream_stax_api_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_jcip_jcip_annotations_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_0_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_james_apache_mime4j_0_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_resteasy_jaxrs_api_2_2_1_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_resteasy_resteasy_jaxb_provider_2_2_1_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_resteasy_resteasy_jaxrs_2_2_1_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_resteasy_resteasy_multipart_provider_2_2_1_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scannotation_scannotation_1_0_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/deploy.bat" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/README.md" afterPath="$PROJECT_DIR$/.openshift/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/action_hooks/README.md" afterPath="$PROJECT_DIR$/.openshift/action_hooks/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/config/modules/README" afterPath="$PROJECT_DIR$/.openshift/config/modules/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/config/standalone.xml" afterPath="$PROJECT_DIR$/.openshift/config/standalone.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/cron/README.cron" afterPath="$PROJECT_DIR$/.openshift/cron/README.cron" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/cron/weekly/README" afterPath="$PROJECT_DIR$/.openshift/cron/weekly/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/cron/weekly/chrono.dat" afterPath="$PROJECT_DIR$/.openshift/cron/weekly/chrono.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/cron/weekly/chronograph" afterPath="$PROJECT_DIR$/.openshift/cron/weekly/chronograph" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/cron/weekly/jobs.allow" afterPath="$PROJECT_DIR$/.openshift/cron/weekly/jobs.allow" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/cron/weekly/jobs.deny" afterPath="$PROJECT_DIR$/.openshift/cron/weekly/jobs.deny" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.openshift/markers/README.md" afterPath="$PROJECT_DIR$/.openshift/markers/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jbosseap.iml" afterPath="$PROJECT_DIR$/jbosseap.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jbosseap.ipr" afterPath="$PROJECT_DIR$/jbosseap.ipr" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jbosseap.iws" afterPath="$PROJECT_DIR$/jbosseap.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/BuildStatusApplication.java" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/BuildStatusApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/GsonMessageBodyHandler.java" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/GsonMessageBodyHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/consumer/GithubConsumer.java" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/consumer/GithubConsumer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/global/RepositoryBuildResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/travisci/Build.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/travisci/TravisCiRepositoryBuildResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/build-status-gateway-java-1.0.war" afterPath="$PROJECT_DIR$/target/build-status-gateway-java-1.0.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/build-status-gateway-java-1.0/WEB-INF/classes/be/rubengerits/buildstatus/consumer/TravisCiConsumer.class" afterPath="$PROJECT_DIR$/target/build-status-gateway-java-1.0/WEB-INF/classes/be/rubengerits/buildstatus/consumer/TravisCiConsumer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/build-status-gateway-java-1.0/WEB-INF/classes/be/rubengerits/buildstatus/services/RepositoriesService.class" afterPath="$PROJECT_DIR$/target/build-status-gateway-java-1.0/WEB-INF/classes/be/rubengerits/buildstatus/services/RepositoriesService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/be/rubengerits/buildstatus/consumer/TravisCiConsumer.class" afterPath="$PROJECT_DIR$/target/classes/be/rubengerits/buildstatus/consumer/TravisCiConsumer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/be/rubengerits/buildstatus/services/RepositoriesService.class" afterPath="$PROJECT_DIR$/target/classes/be/rubengerits/buildstatus/services/RepositoriesService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/consumer/TravisCiConsumer.java" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/consumer/TravisCiConsumer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/github/GithubAuthenticationRequest.java" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/github/GithubAuthenticationRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/github/GithubAuthenticationResponse.java" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/github/GithubAuthenticationResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/github/GithubErrorResponse.java" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/github/GithubErrorResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/global/AuthenticationException.java" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/global/AuthenticationException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/global/AuthenticationResponse.java" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/global/AuthenticationResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/global/RepositoriesException.java" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/global/RepositoriesException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/global/RepositoriesResponse.java" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/global/RepositoriesResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/global/WebserviceError.java" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/global/WebserviceError.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/travisci/Account.java" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/travisci/Account.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/travisci/Repository.java" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/travisci/Repository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/travisci/TravisCiAccountsResponse.java" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/travisci/TravisCiAccountsResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/travisci/TravisCiAuthRequest.java" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/travisci/TravisCiAuthRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/travisci/TravisCiAuthResponse.java" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/travisci/TravisCiAuthResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/travisci/TravisCiRepositoriesResponse.java" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/travisci/TravisCiRepositoriesResponse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/services/AuthenticateService.java" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/services/AuthenticateService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/services/RepositoriesService.java" afterPath="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/services/RepositoriesService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/be/rubengerits/buildstatus/ErrorMessages.properties" afterPath="$PROJECT_DIR$/src/main/resources/be/rubengerits/buildstatus/ErrorMessages.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/health.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/health.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/snoop.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/snoop.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/be/rubengerits/buildstatus/ErrorMessages.properties" afterPath="$PROJECT_DIR$/target/classes/be/rubengerits/buildstatus/ErrorMessages.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/jbosseap/WEB-INF/classes/be/rubengerits/buildstatus/ErrorMessages.properties" afterPath="$PROJECT_DIR$/target/jbosseap/WEB-INF/classes/be/rubengerits/buildstatus/ErrorMessages.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/jbosseap/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/jbosseap/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/jbosseap/health.jsp" afterPath="$PROJECT_DIR$/target/jbosseap/health.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/jbosseap/index.html" afterPath="$PROJECT_DIR$/target/jbosseap/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/jbosseap/snoop.jsp" afterPath="$PROJECT_DIR$/target/jbosseap/snoop.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="build-status-gateway-java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -102,9 +42,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="19" column="72" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="72" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -113,20 +51,124 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/services/RepositoriesService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
+              <caret line="46" column="86" selection-start-line="46" selection-start-column="86" selection-end-line="46" selection-end-column="86" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RepositoriesException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/global/RepositoriesException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RepositoriesResponse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/global/RepositoriesResponse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RepositoryBuildResponse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/global/RepositoryBuildResponse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="e#389#390#0" expanded="true" />
+                <element signature="e#425#426#0" expanded="true" />
+                <element signature="e#463#464#0" expanded="true" />
+                <element signature="e#492#493#0" expanded="true" />
+                <element signature="e#541#542#0" expanded="true" />
+                <element signature="e#577#578#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TravisCiConsumer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Repository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/travisci/Repository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TravisCiConsumer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/consumer/TravisCiConsumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44715446">
-              <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="54" column="81" selection-start-line="54" selection-start-column="81" selection-end-line="54" selection-end-column="81" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TravisCiRepositoryBuildResponse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/travisci/TravisCiRepositoryBuildResponse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+              <folding>
+                <element signature="e#262#263#0" expanded="true" />
+                <element signature="e#291#292#0" expanded="true" />
+                <element signature="e#340#341#0" expanded="true" />
+                <element signature="e#376#377#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Build.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/travisci/Build.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8292683">
+              <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#591#592#0" expanded="true" />
+                <element signature="e#616#617#0" expanded="true" />
+                <element signature="e#653#654#0" expanded="true" />
+                <element signature="e#681#682#0" expanded="true" />
+                <element signature="e#717#718#0" expanded="true" />
+                <element signature="e#748#749#0" expanded="true" />
+                <element signature="e#797#798#0" expanded="true" />
+                <element signature="e#837#838#0" expanded="true" />
+                <element signature="e#870#871#0" expanded="true" />
+                <element signature="e#901#902#0" expanded="true" />
+                <element signature="e#947#948#0" expanded="true" />
+                <element signature="e#987#988#0" expanded="true" />
+                <element signature="e#1021#1022#0" expanded="true" />
+                <element signature="e#1053#1054#0" expanded="true" />
+                <element signature="e#1101#1102#0" expanded="true" />
+                <element signature="e#1143#1144#0" expanded="true" />
+                <element signature="e#1178#1179#0" expanded="true" />
+                <element signature="e#1211#1212#0" expanded="true" />
+                <element signature="e#1261#1262#0" expanded="true" />
+                <element signature="e#1305#1306#0" expanded="true" />
+                <element signature="e#1343#1344#0" expanded="true" />
+                <element signature="e#1377#1378#0" expanded="true" />
+                <element signature="e#1432#1433#0" expanded="true" />
+                <element signature="e#1478#1479#0" expanded="true" />
+                <element signature="e#1521#1522#0" expanded="true" />
+                <element signature="e#1560#1561#0" expanded="true" />
+                <element signature="e#1624#1625#0" expanded="true" />
+                <element signature="e#1680#1681#0" expanded="true" />
+                <element signature="e#1712#1713#0" expanded="true" />
+                <element signature="e#1740#1741#0" expanded="true" />
+                <element signature="e#1782#1783#0" expanded="true" />
+                <element signature="e#1816#1817#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -143,6 +185,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -155,9 +204,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/services/RepositoriesService.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/consumer/GithubConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/GsonMessageBodyHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/travisci/TravisCiRepositoryBuildResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/global/RepositoryBuildResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/services/RepositoriesService.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/consumer/TravisCiConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/travisci/Build.java" />
       </list>
     </option>
   </component>
@@ -352,6 +405,10 @@
               <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="travisci" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -416,10 +473,6 @@
               <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="github" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -457,11 +510,18 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="SearchEverywhereHistoryKey" value="TCCo&#9;FILE&#9;file:///opt/dev/sources/build-status-gateway-java/src/main/java/be/rubengerits/buildstatus/consumer/TravisCiConsumer.java" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="be.rubengerits.buildstatus.model.global" />
+      <recent name="be.rubengerits.buildstatus.model.travisci" />
+    </key>
   </component>
   <component name="RunManager" selected="Remote.JBoss Remote Debug">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -640,7 +700,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
+      <module name="jbosseap" />
       <envs />
       <method />
     </configuration>
@@ -788,7 +848,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="6" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -801,34 +863,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42574257">
-          <caret line="132" column="19" selection-start-line="132" selection-start-column="19" selection-end-line="132" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/services/AuthenticateService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="72" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/services/RepositoriesService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -851,11 +885,137 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4488449">
+          <caret line="143" column="25" selection-start-line="143" selection-start-column="25" selection-end-line="143" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/GsonMessageBodyHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3322785">
+          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/travisci/Repository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/global/RepositoriesResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/global/RepositoryBuildResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+          <folding>
+            <element signature="e#389#390#0" expanded="true" />
+            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#463#464#0" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/services/AuthenticateService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="72" selection-start-line="19" selection-start-column="72" selection-end-line="19" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/global/RepositoriesException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/services/RepositoriesService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="86" selection-start-line="46" selection-start-column="86" selection-end-line="46" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/consumer/TravisCiConsumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44715446">
-          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="81" selection-start-line="54" selection-start-column="81" selection-end-line="54" selection-end-column="81" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/travisci/TravisCiRepositoryBuildResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding>
+            <element signature="e#262#263#0" expanded="true" />
+            <element signature="e#291#292#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#376#377#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/rubengerits/buildstatus/model/travisci/Build.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8292683">
+          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#591#592#0" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#653#654#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#717#718#0" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
+            <element signature="e#797#798#0" expanded="true" />
+            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+            <element signature="e#901#902#0" expanded="true" />
+            <element signature="e#947#948#0" expanded="true" />
+            <element signature="e#987#988#0" expanded="true" />
+            <element signature="e#1021#1022#0" expanded="true" />
+            <element signature="e#1053#1054#0" expanded="true" />
+            <element signature="e#1101#1102#0" expanded="true" />
+            <element signature="e#1143#1144#0" expanded="true" />
+            <element signature="e#1178#1179#0" expanded="true" />
+            <element signature="e#1211#1212#0" expanded="true" />
+            <element signature="e#1261#1262#0" expanded="true" />
+            <element signature="e#1305#1306#0" expanded="true" />
+            <element signature="e#1343#1344#0" expanded="true" />
+            <element signature="e#1377#1378#0" expanded="true" />
+            <element signature="e#1432#1433#0" expanded="true" />
+            <element signature="e#1478#1479#0" expanded="true" />
+            <element signature="e#1521#1522#0" expanded="true" />
+            <element signature="e#1560#1561#0" expanded="true" />
+            <element signature="e#1624#1625#0" expanded="true" />
+            <element signature="e#1680#1681#0" expanded="true" />
+            <element signature="e#1712#1713#0" expanded="true" />
+            <element signature="e#1740#1741#0" expanded="true" />
+            <element signature="e#1782#1783#0" expanded="true" />
+            <element signature="e#1816#1817#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
