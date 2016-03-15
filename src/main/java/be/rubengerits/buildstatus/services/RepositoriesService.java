@@ -14,25 +14,25 @@ import java.util.List;
 
 @Path("/repositories")
 public class RepositoriesService {
-	private static final Logger LOGGER = Logger.getLogger(RepositoriesService.class);
+    private static final Logger LOGGER = Logger.getLogger(RepositoriesService.class);
 
-	@GET
-	@Consumes("application/json")
-	@Produces("application/json")
-	public RepositoriesResponse doGet(@HeaderParam("Authorization") String authorization) throws WebApplicationException {
-		try {
-			TravisCiAccountsResponse accounts = TravisCiConsumer.getAccounts(authorization);
+    @GET
+    @Consumes("application/json")
+    @Produces("application/json")
+    public RepositoriesResponse doGet(@HeaderParam("Authorization") String authorization) throws WebApplicationException {
+        try {
+            TravisCiAccountsResponse accounts = TravisCiConsumer.getAccounts(authorization);
 
-			List<Repository> repositories = new ArrayList<Repository>();
+            List<Repository> repositories = new ArrayList<>();
 
-			for (Account account : accounts.getAccounts()) {
-				repositories.addAll(TravisCiConsumer.getRepositories(authorization, account).getRepos());
-			}
+            for (Account account : accounts.getAccounts()) {
+                repositories.addAll(TravisCiConsumer.getRepositories(authorization, account).getRepos());
+            }
 
-			return new RepositoriesResponse(repositories);
-		} catch (Exception e) {
-			LOGGER.error(e.getMessage(), e);
-			throw new RepositoriesException(e);
-		}
-	}
+            return new RepositoriesResponse(repositories);
+        } catch (Exception e) {
+            LOGGER.error(e.getMessage(), e);
+            throw new RepositoriesException(e);
+        }
+    }
 }

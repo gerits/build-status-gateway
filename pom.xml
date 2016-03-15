@@ -1,10 +1,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>jbosseap</groupId>
-    <artifactId>jbosseap</artifactId>
+    <groupId>be.rubengerits.buildstatus</groupId>
+    <artifactId>build-status-gateway-java</artifactId>
     <packaging>war</packaging>
     <version>1.0</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <name>jbosseap</name>
     <repositories>
         <repository>
@@ -128,10 +140,10 @@
         <profile>
             <id>local</id>
             <properties>
-                <jboss.home>C:\development\apps\EAP</jboss.home>
+                <jboss.home>${env.JBOSS_HOME}</jboss.home>
             </properties>
             <build>
-                <finalName>jbosseap</finalName>
+                <finalName>build-status-gateway</finalName>
                 <plugins>
                     <plugin>
                         <artifactId>maven-war-plugin</artifactId>
