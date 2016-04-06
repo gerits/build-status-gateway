@@ -1,5 +1,7 @@
 package be.rubengerits.buildstatus.model.travisci;
 
+import be.rubengerits.buildstatus.api.travisci.Account;
+
 import java.util.List;
 
 public class TravisCiAccountsResponse {

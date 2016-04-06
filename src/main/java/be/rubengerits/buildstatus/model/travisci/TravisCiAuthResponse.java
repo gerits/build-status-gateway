@@ -3,7 +3,6 @@ package be.rubengerits.buildstatus.model.travisci;
 import com.google.gson.annotations.SerializedName;
 
 public class TravisCiAuthResponse {
-	//@JsonProperty("access_token")
 	@SerializedName("access_token")
 	private String accessToken;
 

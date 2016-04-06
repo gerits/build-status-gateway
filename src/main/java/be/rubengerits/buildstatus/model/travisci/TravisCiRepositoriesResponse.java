@@ -1,15 +1,13 @@
 package be.rubengerits.buildstatus.model.travisci;
 
-import java.util.Arrays;
+import be.rubengerits.buildstatus.api.global.Repository;
+import be.rubengerits.buildstatus.api.travisci.Account;
+
 import java.util.List;
 
 public class TravisCiRepositoriesResponse {
 
 	private List<Repository> repos;
-
-	public TravisCiRepositoriesResponse(Repository[] repositories) {
-		repos = Arrays.asList(repositories);
-	}
 
 	public List<Repository> getRepos() {
 		return repos;

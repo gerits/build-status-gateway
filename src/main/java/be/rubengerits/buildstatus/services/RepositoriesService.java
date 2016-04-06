@@ -1,13 +1,12 @@
 package be.rubengerits.buildstatus.services;
 
+import be.rubengerits.buildstatus.api.global.Repositories;
+import be.rubengerits.buildstatus.api.global.Repository;
+import be.rubengerits.buildstatus.api.global.RepositoryBuild;
+import be.rubengerits.buildstatus.api.travisci.Account;
 import be.rubengerits.buildstatus.consumer.TravisCiConsumer;
 import be.rubengerits.buildstatus.model.global.RepositoriesException;
-import be.rubengerits.buildstatus.model.global.RepositoriesResponse;
-import be.rubengerits.buildstatus.model.global.RepositoryBuildResponse;
-import be.rubengerits.buildstatus.model.travisci.Account;
-import be.rubengerits.buildstatus.model.travisci.Repository;
 import be.rubengerits.buildstatus.model.travisci.TravisCiAccountsResponse;
-import be.rubengerits.buildstatus.model.travisci.TravisCiRepositoryBuildResponse;
 import org.jboss.resteasy.logging.Logger;
 
 import javax.ws.rs.*;
@@ -21,7 +20,7 @@ public class RepositoriesService {
     @GET
     @Consumes("application/json")
     @Produces("application/json")
-    public RepositoriesResponse doGet(@HeaderParam("Authorization") String authorization) throws WebApplicationException {
+    public Repositories doGet(@HeaderParam("Authorization") String authorization) throws WebApplicationException {
         try {
             TravisCiAccountsResponse accounts = TravisCiConsumer.getAccounts(authorization);
 
@@ -31,7 +30,7 @@ public class RepositoriesService {
                 repositories.addAll(TravisCiConsumer.getRepositories(authorization, account).getRepos());
             }
 
-            return new RepositoriesResponse(repositories);
+            return new Repositories(repositories);
         } catch (Exception e) {
             LOGGER.error(e.getMessage(), e);
             throw new RepositoriesException(e);
@@ -42,11 +41,11 @@ public class RepositoriesService {
     @Path("/{id}")
     @Consumes("application/json")
     @Produces("application/json")
-    public RepositoryBuildResponse doGet(@HeaderParam("Authorization") String authorization, @PathParam("id") String id) throws WebApplicationException {
+    public RepositoryBuild doGet(@HeaderParam("Authorization") String authorization, @PathParam("id") String id) throws WebApplicationException {
         try {
-            TravisCiRepositoryBuildResponse repositoryBuilds = TravisCiConsumer.getRepositoryBuilds(authorization, id);
+            RepositoryBuild repositoryBuilds = TravisCiConsumer.getRepositoryBuilds(authorization, id);
 
-            return new RepositoryBuildResponse(repositoryBuilds.getBuilds());
+            return new RepositoryBuild(repositoryBuilds.getBuilds());
         } catch (Exception e) {
             LOGGER.error(e.getMessage(), e);
             throw new RepositoriesException(e);

@@ -1,6 +1,11 @@
 package be.rubengerits.buildstatus.consumer;
 
-import be.rubengerits.buildstatus.model.travisci.*;
+import be.rubengerits.buildstatus.api.global.RepositoryBuild;
+import be.rubengerits.buildstatus.api.travisci.Account;
+import be.rubengerits.buildstatus.model.travisci.TravisCiAccountsResponse;
+import be.rubengerits.buildstatus.model.travisci.TravisCiAuthRequest;
+import be.rubengerits.buildstatus.model.travisci.TravisCiAuthResponse;
+import be.rubengerits.buildstatus.model.travisci.TravisCiRepositoriesResponse;
 import org.jboss.resteasy.client.ClientRequest;
 import org.jboss.resteasy.client.ClientResponse;
 
@@ -48,11 +53,11 @@ public class TravisCiConsumer {
         throw new WebApplicationException(response);
     }
 
-    public static TravisCiRepositoryBuildResponse getRepositoryBuilds(String authorization, String id) throws Exception {
-        ClientResponse response = createTravisCiClient(authorization, "/builds/?repository_id=" + id ).get();
+    public static RepositoryBuild getRepositoryBuilds(String authorization, String id) throws Exception {
+        ClientResponse response = createTravisCiClient(authorization, "/builds/?repository_id=" + id).get();
 
         if (response.getStatus() == 200) {
-            return (TravisCiRepositoryBuildResponse) response.getEntity(TravisCiRepositoryBuildResponse.class);
+            return (RepositoryBuild) response.getEntity(RepositoryBuild.class);
         }
 
         throw new WebApplicationException(response);

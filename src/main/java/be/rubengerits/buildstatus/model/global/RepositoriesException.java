@@ -1,5 +1,7 @@
 package be.rubengerits.buildstatus.model.global;
 
+import be.rubengerits.buildstatus.api.global.Repositories;
+
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;
 import java.util.Locale;
@@ -13,7 +15,7 @@ public class RepositoriesException extends WebApplicationException {
 		super(Response.status(Response.Status.BAD_REQUEST).entity(getAuthenticationResponse(e)).build());
 	}
 
-	private static RepositoriesResponse getAuthenticationResponse(Exception e) {
+	private static Repositories getAuthenticationResponse(Exception e) {
 //		if (e instanceof WebApplicationException) {
 //			Response response = ((WebApplicationException) e).getResponse();
 //			int status = response.getStatus();
@@ -28,9 +30,9 @@ public class RepositoriesException extends WebApplicationException {
 		return getAuthenticationResponse(400, "default.error");
 	}
 
-	private static RepositoriesResponse getAuthenticationResponse(int errorCode, String messageKey) {
+	private static Repositories getAuthenticationResponse(int errorCode, String messageKey) {
 		ResourceBundle resourceBundle = ResourceBundle.getBundle(ERROR_MESSAGES, Locale.getDefault());
-		RepositoriesResponse response = new RepositoriesResponse();
+		Repositories response = new Repositories();
 		response.setStatus(errorCode);
 		response.setMessage(resourceBundle.getString(messageKey));
 		return response;

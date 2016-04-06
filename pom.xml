@@ -1,4 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>be.rubengerits.buildstatus</groupId>
@@ -20,6 +20,16 @@
     <name>jbosseap</name>
     <repositories>
         <repository>
+            <id>build-status</id>
+            <url>http://repo.rubengerits.be/artifactory/build-status</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
             <id>eap</id>
             <url>http://maven.repository.redhat.com/techpreview/all</url>
             <releases>
@@ -34,6 +44,7 @@
             <url>http://repository.jboss.org/maven2</url>
         </repository>
     </repositories>
+
     <pluginRepositories>
         <pluginRepository>
             <id>eap</id>
@@ -46,6 +57,7 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.6</maven.compiler.source>
@@ -90,15 +102,12 @@
                 <version>2.6.2</version>
                 <scope>compile</scope>
             </dependency>
-
-            <!--
-            [INFO] +- org.jboss.resteasy:resteasy-jaxrs:jar:2.3.5.Final:compile
-            [INFO] |  +- org.jboss.resteasy:jaxrs-api:jar:2.3.5.Final:compile
-            [INFO] +- org.jboss.resteasy:resteasy-client:jar:3.0.16.Final:compile
-            [INFO] \- org.jboss.resteasy:resteasy-multipart-provider:jar:3.0.16.Final:compile
-            [INFO]    +- org.jboss.resteasy:resteasy-jaxb-provider:jar:2.3.5.Final:compile
-            -->
-
+            <dependency>
+                <groupId>be.rubengerits.buildstatus</groupId>
+                <artifactId>build-status-api</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <scope>compile</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -119,7 +128,25 @@
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
         </dependency>
+        <dependency>
+            <groupId>be.rubengerits.buildstatus</groupId>
+            <artifactId>build-status-api</artifactId>
+        </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>gerits-releases</name>
+            <url>http://repo.rubengerits.be/artifactory/build-status</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>gerits-snapshots</name>
+            <url>http://repo.rubengerits.be/artifactory/build-status</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <profiles>
         <profile>
             <id>openshift</id>
