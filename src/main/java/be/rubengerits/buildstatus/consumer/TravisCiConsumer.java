@@ -1,6 +1,5 @@
 package be.rubengerits.buildstatus.consumer;
 
-import be.rubengerits.buildstatus.api.global.Repositories;
 import be.rubengerits.buildstatus.api.global.RepositoryBuild;
 import be.rubengerits.buildstatus.api.travisci.Account;
 import be.rubengerits.buildstatus.model.travisci.TravisCiAccountsResponse;
