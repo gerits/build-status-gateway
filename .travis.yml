@@ -1,6 +1,6 @@
 nguage: java
 sudo: false
-script: mvn clean verify
+script: mvn clean install
 
 deploy:
   provider: openshift
