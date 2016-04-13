@@ -10,4 +10,4 @@ deploy:
   app: jbosseap
   domain: gerits
   on:
-    repo: gerits/jbosseap
+    repo: gerits/build-status-gateway
