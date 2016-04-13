@@ -17,7 +17,7 @@
             </plugin>
         </plugins>
     </build>
-    <name>jbosseap</name>
+    <name>Build Status Gateway</name>
     <repositories>
         <repository>
             <id>build-status</id>
