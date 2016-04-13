@@ -1,3 +1,13 @@
 nguage: java
 sudo: false
 script: mvn clean verify
+
+deploy:
+  provider: openshift
+  user: rubengerits360@gmail.com
+  password:
+    secure: BTM2yCLUqUTWsaExd8ccvLSiOXTW5KYMmzhFurc9/ttM4+UzJVh3qSveKoXKMf8Z6xm/Tf0hBdP5vFGco3bbqMs+D+cTft+/g8gQKTwMkF3UmQrZwOCYJJ8byQ72DCTST4tXpDUnrZ+XQJ26xvcFCxFXLGgWPCq87If4FqLMiogRAiVkBF/ZKR1MwWzhVptKXyyui2+8UYRN4PS8I9zWj/g4QE+rnNUAUJZqBWpM/UGzJhCQanCfm+dkpe3ib57xM60Iyef7oipP743Dqud0nliNw64S3e3zYUlA60p34ETUrjpM/f/+74h4zvaPJ5nDw7A4pM61CbgWWT5ZSyI6C4W4HQYHQG9n3DrgVL5VjB8qUvOQvqDlZXPYqlPHq1dwtiP4LWfNBxWP94OOXWF3qEMry2uCjcXT1DoEp0JONXnTpl+O5TxtsiEQeloG3w9Cx5kZ2tLGhUxESPO85pvkT9gwUTkO5lfReHfN/tHCg11k6d/btcmmY6S4X2s4VsOu5Urt9PEhvrXFzzljvq94Kc7Iek17uD5SBqN0lwuh9b+jOi9d6pR9FEjELxr1z8Q2pCQaxRXo5HlJX1IMaQG51Pn/phX5pPsJaomnvz2OOFHPrjyglPpc0+ROexGO97FIpKsxA5mnOXKJ6Tz/vH17sItOh+n4sVakOdD6tQxSfeU=
+  app: jbosseap
+  domain: gerits
+  on:
+    repo: gerits/jbosseap
