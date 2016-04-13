@@ -14,6 +14,7 @@ import javax.ws.rs.ext.Provider;
 import java.io.*;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
+import java.util.Date;
 
 @Provider
 @Produces(MediaType.APPLICATION_JSON)
@@ -26,9 +27,11 @@ public final class GsonMessageBodyHandler implements MessageBodyWriter<Object>, 
 
     private Gson getGson() {
         if (gson == null) {
-            final GsonBuilder gsonBuilder = new GsonBuilder();
-            gsonBuilder.setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-            gson = gsonBuilder.create();
+            gson = new GsonBuilder()
+//                    .setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+                    .registerTypeAdapter(Date.class, new UtcDateTypeAdapter())
+                    .create();
+
         }
         return gson;
     }
