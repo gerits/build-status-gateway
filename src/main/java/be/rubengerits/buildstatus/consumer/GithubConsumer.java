@@ -6,16 +6,18 @@ import be.rubengerits.buildstatus.model.github.GithubErrorResponse;
 import org.jboss.resteasy.client.ClientRequest;
 import org.jboss.resteasy.client.ClientResponse;
 
+import javax.ejb.Stateless;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
+@Stateless
 public class GithubConsumer {
     public static final String GITHUB_API = "https://api.github.com";
     public static final String AUTHORIZATIONS = "/authorizations";
     public static final String ACCEPT = "application/vnd.github.v3+json";
 
-    public static GithubAuthenticationResponse createAuth(String authorization) throws Exception {
+    public GithubAuthenticationResponse createAuth(String authorization) throws Exception {
         GithubAuthenticationRequest authenticationRequest = new GithubAuthenticationRequest();
 
         List<String> scopes = authenticationRequest.getScopes();
@@ -38,11 +40,11 @@ public class GithubConsumer {
         throw new WebApplicationException(response);
     }
 
-    public static void deleteAuth(String authorization, String id) throws Exception {
+    public void deleteAuth(String authorization, String id) throws Exception {
         createGithubClient(authorization, AUTHORIZATIONS + "/" + id).delete();
     }
 
-    private static ClientRequest createGithubClient(String authorization, String url) {
+    private ClientRequest createGithubClient(String authorization, String url) {
         ClientRequest request = new ClientRequest(GITHUB_API + url);
         request.accept(ACCEPT);
         request.header("Authorization", authorization);

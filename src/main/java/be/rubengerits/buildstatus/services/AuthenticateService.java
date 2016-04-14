@@ -8,11 +8,16 @@ import be.rubengerits.buildstatus.model.global.AuthenticationException;
 import be.rubengerits.buildstatus.model.travisci.TravisCiAuthResponse;
 import org.jboss.resteasy.logging.Logger;
 
+import javax.inject.Inject;
 import javax.ws.rs.*;
 
 @Path("/authenticate")
 public class AuthenticateService {
     private static final Logger LOGGER = Logger.getLogger(AuthenticateService.class);
+
+    @Inject TravisCiConsumer travisCiConsumer;
+
+    @Inject GithubConsumer githubConsumer;
 
     @POST
     @Consumes("application/json")
@@ -20,9 +25,9 @@ public class AuthenticateService {
     public Authentication doPost(@HeaderParam("Authorization") String authentication) throws WebApplicationException {
         GithubAuthenticationResponse githubResponse = null;
         try {
-            githubResponse = GithubConsumer.createAuth(authentication);
+            githubResponse = githubConsumer.createAuth(authentication);
 
-            TravisCiAuthResponse travisToken = TravisCiConsumer.createAuth(githubResponse.getToken());
+            TravisCiAuthResponse travisToken = travisCiConsumer.createAuth(githubResponse.getToken());
 
             return new Authentication(travisToken.getAccessToken());
         } catch (Exception e) {
@@ -31,7 +36,7 @@ public class AuthenticateService {
         } finally {
             if (githubResponse != null) {
                 try {
-                    GithubConsumer.deleteAuth(authentication, githubResponse.getId());
+                    githubConsumer.deleteAuth(authentication, githubResponse.getId());
                 } catch (Exception e) {
                     LOGGER.error(e.getMessage(), e);
                     throw new AuthenticationException(e);

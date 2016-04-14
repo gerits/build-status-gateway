@@ -9,16 +9,18 @@ import be.rubengerits.buildstatus.model.travisci.TravisCiRepositoriesResponse;
 import org.jboss.resteasy.client.ClientRequest;
 import org.jboss.resteasy.client.ClientResponse;
 
+import javax.ejb.Stateless;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 
+@Stateless
 public class TravisCiConsumer {
 
     public static final String TRAVIS_API = "https://api.travis-ci.org";
     public static final String USER_AGENT = "TravisBuildStatus/1.0.0";
     public static final String ACCEPT = "application/vnd.travis-ci.2+json";
 
-    public static TravisCiAuthResponse createAuth(String githubToken) throws Exception {
+    public TravisCiAuthResponse createAuth(String githubToken) throws Exception {
         TravisCiAuthRequest request = new TravisCiAuthRequest();
         request.setGithubToken(githubToken);
 
@@ -33,7 +35,7 @@ public class TravisCiConsumer {
         throw new WebApplicationException(response);
     }
 
-    public static TravisCiAccountsResponse getAccounts(String authorization) throws Exception {
+    public TravisCiAccountsResponse getAccounts(String authorization) throws Exception {
         ClientResponse response = createTravisCiClient(authorization, "/accounts").get();
 
         if (response.getStatus() == 200) {
@@ -43,7 +45,7 @@ public class TravisCiConsumer {
         throw new WebApplicationException(response);
     }
 
-    public static TravisCiRepositoriesResponse getRepositories(String authorization, Account account) throws Exception {
+    public TravisCiRepositoriesResponse getRepositories(String authorization, Account account) throws Exception {
         ClientResponse response = createTravisCiClient(authorization, "/repos/?member=" + account.getLogin()).get();
 
         if (response.getStatus() == 200) {
@@ -53,7 +55,7 @@ public class TravisCiConsumer {
         throw new WebApplicationException(response);
     }
 
-    public static RepositoryBuild getRepositoryBuilds(String authorization, String id) throws Exception {
+    public RepositoryBuild getRepositoryBuilds(String authorization, String id) throws Exception {
         ClientResponse response = createTravisCiClient(authorization, "/builds/?repository_id=" + id).get();
 
         if (response.getStatus() == 200) {
@@ -63,7 +65,7 @@ public class TravisCiConsumer {
         throw new WebApplicationException(response);
     }
 
-    private static ClientRequest createTravisCiClient(String authorization, String url) {
+    private ClientRequest createTravisCiClient(String authorization, String url) {
         ClientRequest request = new ClientRequest(TRAVIS_API + url);
         request.accept(ACCEPT);
         request.header("User-Agent", USER_AGENT);

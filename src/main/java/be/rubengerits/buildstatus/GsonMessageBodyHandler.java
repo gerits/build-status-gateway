@@ -19,7 +19,7 @@ import java.util.Date;
 @Provider
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public final class GsonMessageBodyHandler implements MessageBodyWriter<Object>, MessageBodyReader<Object> {
+public class GsonMessageBodyHandler implements MessageBodyWriter<Object>, MessageBodyReader<Object> {
 
     private static final String UTF_8 = "UTF-8";
 
@@ -28,7 +28,6 @@ public final class GsonMessageBodyHandler implements MessageBodyWriter<Object>, 
     private Gson getGson() {
         if (gson == null) {
             gson = new GsonBuilder()
-//                    .setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
                     .registerTypeAdapter(Date.class, new UtcDateTypeAdapter())
                     .create();
 
